@@ -1,3 +1,36 @@
+/*
+Это - джаваскрипт-комментарий
+*/
+const testDiv = document.querySelector('.test');
+/*
+А эта штука позволяет положить в переменную, точнее в константу,
+твой див
+Про неё можно почитать вот здесь
+https://www.w3schools.com/jsref/met_document_queryselector.asp
+*/
+
+/*Ниже будет функция. Надеюсь, ты уже знаком с функциями через паскаль
+Если нет, то тут можно почиать, что такое функция
+https://www.w3schools.com/js/js_functions.asp
+Мы будем ещё вызывать эту функцию ниже в коде, например, вот так
+innerHTMLToTestDiv(test1);
+*/
+function innerHTMLToTestDiv(text) {
+    testDiv.innerHTML += text + '<br>';
+    /*Здесь мы используем innerHTML, можешь почиать про него здесь
+    https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
+    Простыми словами, мы добавляем тескт и переход на новую строку <br>
+    */
+}
+
+//Это тоже функция.
+//А это - новый тип комментариев в JS - однострочные
+function innerTextToTestDiv(text) {
+    testDiv.innerText += text;
+    //innerText работает аналогично innerHTML, но игнорирует html-разметку
+    //Плюс ещё кое-что
+}
+
 const test1 = 0b0001;
 const test2 = 0o1;
 const test3 = 0x1;
@@ -7,54 +40,54 @@ const test6 = -0.1;
 const test7 = 1n;
 const test8 = true;
 const test9 = `Test ${test1}`
-document.write(test1);
-document.write(test2);
-document.write(test3);
-document.write(test4);
-document.write(test5);
-document.write(test6);
-document.write(test7);
-document.write(test8);
-document.write(test9);
-document.write(Number.MIN_VALUE);
-document.write(Number.MAX_VALUE);
-document.write(BigInt.MIN_VALUE);
-document.write(BigInt.MAX_VALUE);
-document.write(String.MAX_VALUE);
-document.write(String.MAX_VALUE);
-document.write(Boolean.MIN_VALUE);
-document.write(Boolean.MAX_VALUE);
-var test10 = test;
-document.write(test10);
-document.write(typeof test10);
+//И вот мы начинаем вызывать функцию innerHTMLToTestDiv(), добавляя строки в твой див
+innerHTMLToTestDiv(test1);
+innerHTMLToTestDiv(test2);
+innerHTMLToTestDiv(test3);
+innerHTMLToTestDiv(test4);
+innerHTMLToTestDiv(test5);
+innerHTMLToTestDiv(test6);
+innerHTMLToTestDiv(test7);
+innerHTMLToTestDiv(test8);
+innerHTMLToTestDiv(Number.MIN_VALUE);
+innerHTMLToTestDiv(Number.MAX_VALUE);
+innerHTMLToTestDiv(BigInt.MIN_VALUE);
+innerHTMLToTestDiv(BigInt.MAX_VALUE);
+innerHTMLToTestDiv(String.MAX_VALUE);
+innerHTMLToTestDiv(String.MAX_VALUE);
+innerHTMLToTestDiv(Boolean.MIN_VALUE);
+innerHTMLToTestDiv(Boolean.MAX_VALUE);
+//Я закомментировал нерабочий кот, который ломал другие функции
+//var test10 = test;
+//innerHTMLToTestDiv(test10);
+innerHTMLToTestDiv(typeof test10);
 test10 = 1;
-document.write(test10);
-document.write(typeof test10)
-document.write(typeof test1);
-document.write(typeof test2);
-document.write(typeof test3);
-document.write(typeof test4);
-document.write(typeof test5);
-document.write(typeof test6);
-document.write(typeof test7);
-document.write(typeof test8);
-document.write(typeof test9);
-document.write(Number.MIN_VALUE);
-document.write(Number.MAX_VALUE);
-document.write(BigInt.MIN_VALUE);
-document.write(BigInt.MAX_VALUE);
-document.write(String.MAX_VALUE);
-document.write(String.MAX_VALUE);
-document.write(Boolean.MIN_VALUE);
-document.write(Boolean.MAX_VALUE);
-const test11 = {test12: "test", test13: 1};
-var test14;
-document.write(test11);
-document.write(test12);
-document.write(test13);
-document.write(test14);
-const test15 =
-`— Скажи-ка, дядя, ведь не даром
+innerHTMLToTestDiv(test10);
+//innerHTMLToTestDiv(typeof test10)
+innerHTMLToTestDiv(typeof test1);
+innerHTMLToTestDiv(typeof test2);
+innerHTMLToTestDiv(typeof test3);
+innerHTMLToTestDiv(typeof test4);
+innerHTMLToTestDiv(typeof test5);
+innerHTMLToTestDiv(typeof test6);
+innerHTMLToTestDiv(typeof test7);
+innerHTMLToTestDiv(typeof test8);
+innerHTMLToTestDiv(typeof test9);
+innerHTMLToTestDiv(Number.MIN_VALUE);
+innerHTMLToTestDiv(Number.MAX_VALUE);
+/*innerHTMLToTestDiv(BigInt.MIN_VALUE);
+innerHTMLToTestDiv(BigInt.MAX_VALUE);
+innerHTMLToTestDiv(String.MAX_VALUE);
+innerHTMLToTestDiv(String.MAX_VALUE);
+innerHTMLToTestDiv(Boolean.MIN_VALUE);
+innerHTMLToTestDiv(Boolean.MAX_VALUE);*/
+//const test11 = {test12: "test", test13: 1};
+//var test14;
+/*innerHTMLToTestDiv(test11);
+innerHTMLToTestDiv(test12);
+innerHTMLToTestDiv(test13);
+innerHTMLToTestDiv(test14);*/
+const test15 =`— Скажи-ка, дядя, ведь не даром
 Москва, спаленная пожаром,
 Французу отдана?
 Ведь были ж схватки боевые,
@@ -152,4 +185,10 @@ const test15 =
 Немногие вернулись с поля.
 Когда б на то не божья воля,
 Не отдали б Москвы!`;
-document.write(test15);
+//Тут мы используем не innerHTMLToTestDiv()>, а innerTextToTestDiv()
+innerTextToTestDiv(test15);
+/*
+На этом всё. надеюсь, я тебя не сильно загрузил новой инфой.
+Можешь попробовать вместо вывода в div вывод в консоль.
+Также можешь удалить мои комменты, если они не нужны.
+*/
